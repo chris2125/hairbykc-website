@@ -1,0 +1,132 @@
+<html>
+<head>
+        <title>HAIRBYKC</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner" id="home">
+        <div class="navbar">
+            <img src="logo.jpg" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+
+        <div class="content">
+            <h1>Welcome to HAIRBYKC</h1>
+            <p>Get Your Hair Done By Kelly Cyanda.<br> Book with Us and we will ensure your hair is done to perfection.</p>
+            <a href="https://www.instagram.com/hairbykc.ie/?__pwa=1#">
+                <button type="button"><span></span> FOLLOW US</button>
+            </a>
+            <a href="https://wa.me/353832032955" target="_blank">
+                <button type="button"><span></span>BOOK NOW</button>
+            </a>
+        </div>
+
+<section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+        <div class="service">
+            <h3>Braiding</h3>
+            <p>Professional braiding styles done to perfection.</p>
+        </div>
+
+        <div class="service">
+            <h3>Wigs Installation</h3>
+            <p>High quality wig installation and styling.</p>
+        </div>
+
+        <div class="service">
+            <h3>Hair Treatment</h3>
+            <p>Healthy treatments to keep your hair strong.</p>
+        </div>
+    </div>
+</section>
+
+<section class="gallery" id="gallery">
+    <h2>Our Work</h2>
+    <div class="gallery-images">
+        <img src="hair1.png">
+        <img src="hair2.png">
+        <img src="hair3.png">
+        <img src="hair4.png">
+        <img src="hair5.png">
+        <img src="hair6.png">
+        <img src="hair7.png">
+        <img src="hair8.png">
+        <img src="hair9.png">
+        <img src="hair10.png">
+        <img src="hair11.png">
+        <img src="hair12.png">
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Book an Appointment</h2>
+    <p>Contact us to schedule your hair appointment.</p>
+</section>
+
+<footer>
+    <p>© 2026 HAIRBYKC | All Rights Reserved</p>
+    <p>Follow us on <a href="https://www.instagram.com/hairbykc.ie/?__pwa=1#">Instagram</a> 
+    and <a href="https;//wa.me/353832032955" target="_blank">WhatsApp</a></p>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+</script>
+<script>
+function bookNow() {
+    let message = "Hello, I would like to book a hair appointment at HairbyKC";
+    let phone = "353832032955";
+
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+}
+</script>
+<script>
+window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+<script>
+document.querySelector("button").addEventListener("click", function() {
+    this.style.transform = "scale(0.95)";
+    setTimeout(() => {
+        this.style.transform = "scale(1)";
+    }, 150);
+});
+</script>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    let trigger = window.innerHeight * 0.85;
+
+    sections.forEach(section => {
+        let top = section.getBoundingClientRect().top;
+
+        if(top < trigger){
+            section.style.opacity = 1;
+            section.style.transform = "translateY(0)";
+        }
+    });
+});
+</script>
+</body>
+</html>
