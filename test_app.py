@@ -74,6 +74,13 @@ class BookingApiTests(unittest.TestCase):
         self.assertEqual(response.mimetype, "image/jpeg")
         response.close()
 
+    def test_favicon_is_served(self):
+        response = self.client.get("/favicon.png")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.mimetype, "image/png")
+        response.close()
+
 
 if __name__ == "__main__":
     unittest.main()
