@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HairbyKC
 
 This is a Flask-backed website. Appointment requests submitted from the booking
@@ -26,3 +27,10 @@ customer bookings.
 For a live site, deploy the Flask app and database to a Python-capable host and
 configure persistent storage for the SQLite file. Do not use the local
 development server as a production server.
+=======
+# hairbykc-website
+A professional mobile African braider.Always available to braid your hair in Ireland
+I had created this website for this
+Book professional African hair braiding, delivered to your door anywhere in Ireland
+On-demand mobile braider specializing in African hairstyles, serving Ireland
+>>>>>>> origin/main
