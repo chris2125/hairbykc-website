@@ -815,7 +815,7 @@
           observer.unobserve(entry.target); // animate once
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.01 });
     sections.forEach(s => observer.observe(s));
 
     // Button click ripple — targets ALL buttons & .btn links
