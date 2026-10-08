@@ -26,3 +26,16 @@ customer bookings.
 For a live site, deploy the Flask app and database to a Python-capable host and
 configure persistent storage for the SQLite file. Do not use the local
 development server as a production server.
+
+## Deploy to Render
+
+The `render.yaml` Blueprint configures a free Render web service in Frankfurt.
+To deploy it, push this repository to GitHub, sign in to Render, choose **New
+> Blueprint**, connect this repository, and apply the Blueprint. Render will
+provide a URL ending in `onrender.com`; the `hairbykc` name is subject to
+availability and can be changed in the Blueprint before creation.
+
+The free web service may sleep when idle, and its local filesystem is temporary.
+Because appointment requests currently use SQLite, booking data can be lost
+when the service restarts, sleeps, or redeploys. Use persistent database
+storage before relying on this deployment for real appointment requests.
